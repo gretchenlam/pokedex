@@ -83,7 +83,7 @@ function App() {
           <>
             <h1>{capitalizeFirstLetter(pokemon.name)}</h1>
             <img src={pokemon.img}/>
-            <h3>Pokedex Number: {pokemon.pokedexNum}</h3>
+            <h2>Pokedex Number: {pokemon.pokedexNum}</h2>
             <h3>Type: {pokemon.type1} {pokemon.type2}</h3>
             <h4>Base Stats</h4>
             <h4>HP: {pokemon.hp}</h4>
