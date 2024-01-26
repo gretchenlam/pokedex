@@ -1,6 +1,6 @@
 # Pokedex App
 
-Welcome to my Pokedex app! This React application allows users to search for Pokemon, view their details, and navigate through the Pokedex.
+Welcome to my Pokedex app! This React application pulls from PokeAPI, allowing users to search for Pokemon, view their details, and navigate through the Pokedex.
 
 ## Features
 
