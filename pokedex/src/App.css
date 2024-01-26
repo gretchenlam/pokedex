@@ -61,7 +61,41 @@ body {
   overflow-y: auto; /* Enable vertical scrolling if content exceeds the height */
   background-position: center;
   background-position: bottom;
+  color: black;
 }
+
+.NavigationButtons {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  width: 580px;
+}
+
+.ArrowButton {
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: white;
+  color: #2584cc;
+  border: none;
+  border-radius: 5px;
+}
+
+.ArrowButton:hover {
+  background-color: #8b8f91;
+}
+
+.ArrowButton.Left {
+  margin-right: 10px;
+}
+
+.ArrowButton.Right {
+  margin-left: 10px;
+}
+
+/* ... (your existing styles) */
 
 /* Other styles remain unchanged */
 

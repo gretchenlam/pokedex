@@ -64,6 +64,48 @@ function App() {
     );
   };
 
+  const searchPokemonClick = (offset = 0) => {
+    const newPokedexNum = parseInt(pokemon.pokedexNum) + offset;
+    Axios.get(`https://pokeapi.co/api/v2/pokemon/${newPokedexNum}`).then(
+      (response) => {
+        if (response.data.types.length > 1) {
+          setPokemon({
+            name: response.data.name, 
+            pokedexNum: response.data.id, 
+            img: response.data.sprites.other.showdown.front_default, 
+            hp: response.data.stats[0].base_stat,
+            attack: response.data.stats[1].base_stat,
+            defense: response.data.stats[2].base_stat,
+            specialAttack: response.data.stats[3].base_stat,
+            specialDefense: response.data.stats[4].base_stat,
+            speed: response.data.stats[5].base_stat,
+            type1: response.data.types[0].type.name,
+            type2: response.data.types[1].type.name
+          })
+        } else {
+          setPokemon({
+            name: response.data.name, 
+            pokedexNum: response.data.id, 
+            img: response.data.sprites.other.showdown.front_default, 
+            hp: response.data.stats[0].base_stat,
+            attack: response.data.stats[1].base_stat,
+            defense: response.data.stats[2].base_stat,
+            specialAttack: response.data.stats[3].base_stat,
+            specialDefense: response.data.stats[4].base_stat,
+            speed: response.data.stats[5].base_stat,
+            type1: response.data.types[0].type.name
+          });
+        }
+        console.log(response)
+        setPokemonChosen(true);
+      }
+    );  
+  };
+
+  const handlePrevNextClick = (offset) => {
+    searchPokemonClick(offset);
+  }
+
   return (
     <div className="App">
       <div className="TitleSection">
@@ -81,18 +123,27 @@ function App() {
           <h1>Please choose a Pokemon</h1>  
         ) : (
           <>
-            <h1>{capitalizeFirstLetter(pokemon.name)}</h1>
-            <img src={pokemon.img}/>
-            <h2>Pokedex Number: {pokemon.pokedexNum}</h2>
-            <h3>Type: {pokemon.type1} {pokemon.type2}</h3>
-            <h4>Base Stats</h4>
-            <h4>HP: {pokemon.hp}</h4>
-            <h4>Attack: {pokemon.attack}</h4>
-            <h4>Special Attack: {pokemon.specialAttack}</h4>
-            <h4>Defense: {pokemon.defense}</h4>
-            <h4>Special Defense: {pokemon.specialDefense}</h4>
-            <h4>Speed: {pokemon.speed}</h4>
-          </>
+          <div className="NavigationButtons">
+            <button className="ArrowButton" onClick={() => handlePrevNextClick(-1)}>
+              &#9664;
+            </button>
+            <button className="ArrowButton" onClick={() => handlePrevNextClick(1)}>
+              &#9654;
+            </button>
+          </div>
+          <h1>{capitalizeFirstLetter(pokemon.name)}</h1>
+          <img src={pokemon.img} alt={pokemon.name}/>
+          <h2>Pokedex Number: {pokemon.pokedexNum}</h2>
+          <h3>Type: {pokemon.type1} {pokemon.type2}</h3>
+          <h4>Base Stats</h4>
+          <h4>HP: {pokemon.hp}</h4>
+          <h4>Attack: {pokemon.attack}</h4>
+          <h4>Special Attack: {pokemon.specialAttack}</h4>
+          <h4>Defense: {pokemon.defense}</h4>
+          <h4>Special Defense: {pokemon.specialDefense}</h4>
+          <h4>Speed: {pokemon.speed}</h4>
+        </>
+
         )}
       </div>
     </div>
