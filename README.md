@@ -44,5 +44,14 @@ Please ensure you have the following installed on your machine:
 4. View the details of the selected Pokemon, including its image, Pokedex number, types, and base stats.
 5. Use the back and forward arrow buttons to navigate through the Pokedex.
 
+
+## Future Features
+
+* [ ] Switch between male and female to showcase differences between Pokemon genders.
+* [ ] Show front and back moving sprites.
+* [ ] Display evolution lines, and let users navigate through Pokemon in that line.
+
+
 ## Web App Deployment
+
 My Pokedex app is also available online. You can access it at [https://pokemon-pokedex-app.web.app/](https://pokemon-pokedex-app.web.app/).
