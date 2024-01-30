@@ -48,7 +48,9 @@ Please ensure you have the following installed on your machine:
 ## Future Features
 
 * [ ] Switch between male and female to showcase differences between Pokemon genders.
+* [ ] Switch between normal and shiny sprites.
 * [ ] Show front and back moving sprites.
+* [ ] Improve sprite quality.
 * [ ] Display evolution lines, and let users navigate through Pokemon in that line.
 
 
