@@ -52,8 +52,3 @@ Please ensure you have the following installed on your machine:
 * [ ] Show front and back moving sprites.
 * [ ] Improve sprite quality.
 * [ ] Display evolution lines, and let users navigate through Pokemon in that line.
-
-
-## Web App Deployment
-
-My Pokedex app is also available online. You can access it at [https://pokemon-pokedex-app.web.app/](https://pokemon-pokedex-app.web.app/).
