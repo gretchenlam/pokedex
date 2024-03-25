@@ -50,7 +50,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('https://scontent.xx.fbcdn.net/v/t1.15752-9/404631036_3124742967820532_3314235581352780179_n.jpg?stp=dst-jpg_p403x403&_nc_cat=104&ccb=1-7&_nc_sid=510075&_nc_ohc=_6JwoSwqyMEAX9cURoc&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AdQgohJNfm4zOEkyEFknyWBEsD8ESDPBNuSUHuEnQsqCKg&oe=65DAC5C2');
+  background-image: url('./assets/background.jpg');
   background-size: cover;
   height: 800px;
   overflow-y: auto;
